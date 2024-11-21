@@ -1,5 +1,4 @@
-FROM eclipse-temurin:17-alpine
-WORKDIR /app
-COPY target/DockerSpringAwsIntegrationApplication.jar DockerSpringAwsIntegrationApplication.jar
+FROM openjdk:17
+ADD target/DockerSpringAwsIntegrationApplication.jar DockerSpringAwsIntegrationApplication.jar
 EXPOSE 8080
-CMD ["java","-jar","DockerSpringAwsIntegrationApplication.jar"]
+ENTRYPOINT ["java","-jar","/DockerSpringAwsIntegrationApplication.jar"]
