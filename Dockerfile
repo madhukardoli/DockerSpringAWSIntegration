@@ -1,4 +1,4 @@
 FROM openjdk:17
-ADD target/DockerSpringAwsIntegrationApplication.jar DockerSpringAwsIntegrationApplication.jar
+ADD target/DockerSpringAWSIntegration-0.0.1-SNAPSHOT.jar DockerSpringAWSIntegration-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/DockerSpringAwsIntegrationApplication.jar"]
+ENTRYPOINT ["java","-jar","/DockerSpringAWSIntegration-0.0.1-SNAPSHOT.jar"]
