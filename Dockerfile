@@ -1,3 +1,5 @@
 FROM openjdk:17
-ADD target/DockerSpringAwsIntegrationApplication-1.0-SNAPSHOT.jar DockerSpringAwsIntegrationApplication-1.0-SNAPSHOT.jar
-ENTRYPOINT ["java","-jar","/DockerSpringAwsIntegrationApplication-1.0-SNAPSHOT.jar"]
+WORKDIR /app
+COPY target/DockerSpringAwsIntegrationApplication-1.0.jar DockerSpringAwsIntegrationApplication-1.0.jar
+EXPOSE 8080
+CMD ["java", "-jar", "DockerSpringAwsIntegrationApplication-1.0.jar"]
