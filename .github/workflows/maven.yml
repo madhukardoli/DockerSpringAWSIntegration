@@ -34,7 +34,7 @@ jobs:
     - name: Build Image
       run: docker build -t localdockermdoli/myawsimage .
     - name: Docker Image push localdockermdoli/myawsimage
-      run: docker push docker.io/localdockermdoli/myawsimage:latest
+      run: docker push docker.io/localdockermdoli/myawsimage
 
   deploy:
     needs: build
