@@ -34,14 +34,14 @@ jobs:
     - name: Build Image
       run: docker build -t localdockermdoli/myawsimage .
     - name: Docker Image push localdockermdoli/myawsimage
-      run: docker push docker.io/localdockermdoli/myawsimage
+      run: docker push docker.io/localdockermdoli/myawsimage:latest
 
   deploy:
     needs: build
     runs-on: [aws-ec2]
     steps:
       - name: Pull Image from dockerhub
-        run: docker pull localdockermdoli/myawsimage:latest
+        run: docker pull localdockermdoli/myawsimage
       - name: Delete old container
         run: docker rm -f DockerSpringAwsIntegrationApplication
       - name: Run docker container
